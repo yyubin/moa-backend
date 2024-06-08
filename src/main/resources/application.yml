@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://13.211.237.144/postgres
+    username: loamoa
+    password: tmddlsgowntpdy68
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
