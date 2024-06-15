@@ -25,7 +25,7 @@ import java.time.LocalDateTime;
 public class MemberEntity extends UuidBaseEntity {
 
     /** 계정 **/
-    private String username;
+    private String email;
 
     private String password;
 

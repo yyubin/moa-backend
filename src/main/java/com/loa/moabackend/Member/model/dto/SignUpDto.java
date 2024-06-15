@@ -5,16 +5,14 @@ import jakarta.validation.constraints.Pattern;
 import lombok.Builder;
 
 import static com.loa.moabackend.Member.model.policy.Accounts.InvalidationMessage.PASSWORD_MESSAGE;
-import static com.loa.moabackend.Member.model.policy.Accounts.InvalidationMessage.USERNAME_MESSAGE;
 import static com.loa.moabackend.Member.model.policy.Accounts.Validation.PASSWORD;
-import static com.loa.moabackend.Member.model.policy.Accounts.Validation.USERNAME;
+
 
 public record SignUpDto() {
     @Builder
     public record SignUpRequestDto(
             @NotBlank
-            @Pattern(regexp = USERNAME, message = USERNAME_MESSAGE)
-            String username,
+            String email,
 
             @NotBlank
             @Pattern(regexp = PASSWORD, message = PASSWORD_MESSAGE)

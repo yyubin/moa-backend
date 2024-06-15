@@ -17,7 +17,7 @@ import java.util.UUID;
 public class Member {
     public UUID id;
     /** 계정 **/
-    private String username;
+    private String email;
     private String password;
 
     private String nickname;
