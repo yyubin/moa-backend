@@ -2,29 +2,34 @@ package com.loa.moabackend.Member.model.entity;
 
 import com.loa.moabackend.Member.model.CertificationCheck;
 import com.loa.moabackend.Member.model.MemberStatus;
-import com.loa.moabackend.core.support.UuidBaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-@ToString
 @Data
 @Table(name = "member", schema = "auth")
-public class MemberEntity extends UuidBaseEntity {
+public class MemberEntity {
 
     /** 계정 **/
+    @Id
+    @GeneratedValue(generator = "uuid2")
+    private UUID memberId;
+
     private String email;
 
     private String password;
