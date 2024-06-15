@@ -24,10 +24,10 @@ import java.util.UUID;
 @Data
 @Table(name = "member", schema = "auth")
 public class MemberEntity {
-
     /** 계정 **/
     @Id
     @GeneratedValue(generator = "uuid2")
+    @Column(name = "member_id")
     private UUID memberId;
 
     private String email;
