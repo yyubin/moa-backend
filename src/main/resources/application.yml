@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    include: oauth
   datasource:
     url: jdbc:postgresql://13.211.237.144/postgres
     username: loamoa
@@ -6,3 +8,22 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id:
+            client-secret:
+            scope:
+              - email
+              - profile
+
+server:
+  port: 8081
+
+jwt:
+  secret: ehdgoanfrhkqorentksdlakfmrhekfgehfhrgksmsladlqhdngktkdnflskfkakstpanrndghktkacjsflghkfurkdtkseogkstkfkaeogksdmfhrlfdlqhwjsgktp123123123skatksdnlddpwjthskancjfrkqdmfenfmsemtqkfkatjflqnfqusgkadmsdnflrltkddlftprkdmfgksmfrhdghkfgksep
