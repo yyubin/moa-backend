@@ -1,4 +1,4 @@
-package com.loa.moabackend.Chat.model.entity;
+package com.loa.moabackend.chat.model.entity;
 
 import com.loa.moabackend.Member.model.entity.MemberEntity;
 import jakarta.persistence.Column;
@@ -23,19 +23,16 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "chatroom", schema = "chat")
-public class ChatRoomEntity{
+public class ChatRoomEntity {
 
     @Id
     @GeneratedValue(generator = "uuid2")
     @Column(name = "chatroom_id")
-    private UUID chatroomId;
+    private UUID roomId;
 
-    @ManyToOne
-    @JoinColumn(name = "sender_id", referencedColumnName = "member_id")
-    private MemberEntity sender;
+    @Column(name = "sender_id")
+    private UUID senderId;
 
-    @ManyToOne
-    @JoinColumn(name = "receiver_id", referencedColumnName = "member_id")
-    private MemberEntity receiver;
-
+    @Column(name = "receiver_id")
+    private UUID receiverId;
 }
