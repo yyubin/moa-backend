@@ -1,4 +1,4 @@
-package com.loa.moabackend.Chat.config;
+package com.loa.moabackend.chat.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
